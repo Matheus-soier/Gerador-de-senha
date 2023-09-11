@@ -20,11 +20,13 @@ body {
 .logo {
     max-width: 600px;
     margin-bottom: 24px;
+    padding: 0 15px;
 }
 
 .container-input {
     max-width: 480px;
     margin: 14px 0;
+    padding: 0 15px;
 }
 
 .container-input span {
@@ -67,6 +69,7 @@ body {
     align-items: center;
     flex-direction: column;
     cursor: pointer;
+    padding: 0 15px;
 }
 
 .title {
@@ -102,8 +105,24 @@ body {
     text-align: center;
     font-size: 16px;
     border-radius: 6px;
-    /* visibility: hidden; */
+    visibility: hidden;
+    opacity: 0; 
+    transition: all .3s ease-in-out; 
 }
 
+.hide {
+    display: none;
+}
 
+.container-password:hover .tooltip{
+    visibility: visible;
+    opacity: 1;
+}
 
+@media (max-width: 380px) {
+    .title,
+    .container-input span,
+    .button-cta{
+        font-size: 16px;
+    }
+}
